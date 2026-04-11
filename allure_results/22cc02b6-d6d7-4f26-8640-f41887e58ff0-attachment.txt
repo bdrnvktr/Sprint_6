@@ -1,0 +1,3 @@
+Текущий URL перед кликом: https://qa-scooter.praktikum-services.ru/order
+Найден элемент: <a target="_blank" rel="noopener noreferrer" href="//yandex.ru" class="Header_LogoYandex__3TSOI"><img src="/assets/ya.svg" alt="Yandex"></a>
+Текущий URL новой вкладки: https://sso.dzen.ru/install?uuid=4981a4a1-8e87-41ad-b2e0-eb6d0884ee2c
