@@ -16,10 +16,10 @@ class OrderPageLocators:
     ORDER_NEXT_BUTTON = (By.XPATH, "//button[contains(@class, 'Button_Button__ra12g') and contains(text(), 'Далее')]") # Кнопка Далее в форме
     DATE_FIELD = (By.CSS_SELECTOR, 'input[placeholder="* Когда привезти самокат"]') # Поле когда привезти самокат
     CALENDAR_CLICK = (By.CSS_SELECTOR,'div[aria-label="Choose пятница, 1-е мая 2026 г."]') # Выбор даты
-    RENTAL_PERIOD_FIELD = locator = (By.CSS_SELECTOR, 'div.Dropdown-placeholder') # Поле срока аренды
+    RENTAL_PERIOD_FIELD = (By.CSS_SELECTOR, 'div.Dropdown-placeholder') # Поле срока аренды
     CHOOSING_DATE = (By.XPATH,'//div[contains(@class, "Dropdown-option") and text() = "сутки"]') # выбор кол-ва дней аренды
     ORDER_BUTTON = (By.CSS_SELECTOR, '#root > div > div.Order_Content__bmtHS > div.Order_Buttons__1xGrp > button:nth-child(2)') # Нижняя кнопка заказать в форме про аренду
     YES_BUTTON_ORDER = (By.CSS_SELECTOR, '#root > div > div.Order_Content__bmtHS > div.Order_Modal__YZ-d3 > div.Order_Buttons__1xGrp > button:nth-child(2)') # Кнопка "Да"подтверждения заказа
     
     # Сообщения
-    SUCCESS_ORDER_MESSAGE = (By.CLASS_NAME, 'Order_ModalHeader__3FDaJ') # сообщение об оформлении заказа
+    SUCCESS_ORDER_MESSAGE = (By.XPATH, "//div[contains(@class, 'Order_ModalHeader') and contains(text(), 'Заказ оформлен')]") # сообщение об оформлении заказа
