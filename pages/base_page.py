@@ -44,16 +44,12 @@ class BasePage:
         self.click_element(BasePageLocators.YA_LOGO)
         WebDriverWait(self.driver, 30).until(lambda driver: len(driver.window_handles) > 1)
         all_windows = self.driver.window_handles
-        new_window = next((window for window in all_windows if window != original_window), None)
-        if not new_window:
-            return False
+        new_window = all_windows[1]
         self.driver.switch_to.window(new_window)
         WebDriverWait(self.driver, 20).until(lambda driver: driver.current_url != "about:blank")
         WebDriverWait(self.driver, 25).until(lambda driver: driver.execute_script("return document.readyState") == "complete")
         current_url = self.driver.current_url
-        result = "dzen.ru" in current_url
+        assert "dzen.ru" in current_url
         self.driver.close()
         self.driver.switch_to.window(original_window)
-        return result
-    
-    
+        return True

@@ -39,11 +39,8 @@ class OrderPage(BasePage):
         self.click_element(OrderPageLocators.YES_BUTTON_ORDER)
 
     @allure.step("Проверка успешного создания заказа")
-    def check_success_order(self):
-        try:
-            self.find_element(OrderPageLocators.SUCCESS_ORDER_MESSAGE)
-            return True
-        except TimeoutException:
-            return False
+    def check_success_order(self):  
+        elements = self.driver.find_elements(*OrderPageLocators.SUCCESS_ORDER_MESSAGE)
+        return len(elements) > 0 and elements[0].is_displayed()
 
     
